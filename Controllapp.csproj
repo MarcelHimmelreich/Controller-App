@@ -1,0 +1,476 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B17BF72D-03F0-8B0D-A461-FD1002401841}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
+    <UnityVersion>2017.3.1f1</UnityVersion>
+    <RootNamespace></RootNamespace>
+    <LangVersion>4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_3_1;UNITY_2017_3;UNITY_2017;PLATFORM_ARCH_64;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_3_1;UNITY_2017_3;UNITY_2017;PLATFORM_ARCH_64;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="Boo.Lang" />
+    <Reference Include="UnityScript.Lang" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEditor">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WebModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.WebModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StyleSheetsModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticlesLegacyModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ParticlesLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Networking">
+      <HintPath>A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.TestRunner">
+      <HintPath>A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TestRunner">
+      <HintPath>A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Timeline">
+      <HintPath>A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Timeline">
+      <HintPath>A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.TreeEditor">
+      <HintPath>A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIAutomation">
+      <HintPath>A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.UIAutomation">
+      <HintPath>A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/Editor/UnityEditor.UIAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.GoogleAudioSpatializer">
+      <HintPath>A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GoogleAudioSpatializer">
+      <HintPath>A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.HoloLens">
+      <HintPath>A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HoloLens">
+      <HintPath>A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.SpatialTracking">
+      <HintPath>A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.VR">
+      <HintPath>A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Graphs">
+      <HintPath>A:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+      <HintPath>A:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
+      <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>C:/Users/Marcel/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Advertisements">
+      <HintPath>C:/Users/Marcel/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/Editor/UnityEditor.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>C:/Users/Marcel/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Analytics">
+      <HintPath>C:/Users/Marcel/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/Editor/UnityEditor.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing">
+      <HintPath>C:/Users/Marcel/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Purchasing">
+      <HintPath>C:/Users/Marcel/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/Editor/UnityEditor.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StandardEvents">
+      <HintPath>C:/Users/Marcel/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Controllapp.Plugins.csproj">
+      <Project>{EE8B634A-66D9-39E8-0598-FF832AF2225D}</Project>
+      <Name>Controllapp.Plugins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\ClientManager.cs" />
+    <Compile Include="Assets\extOSC\Examples\1) Getting Started\Scripts\SimpleMessageReceiver.cs" />
+    <Compile Include="Assets\extOSC\Examples\1) Getting Started\Scripts\SimpleMessageTransmitter.cs" />
+    <Compile Include="Assets\extOSC\Examples\10) Serialization\Scripts\SerializationExample.cs" />
+    <Compile Include="Assets\extOSC\Examples\11) Ping\Scripts\PingExample.cs" />
+    <Compile Include="Assets\extOSC\Examples\12) Array\Scripts\ArrayExample.cs" />
+    <Compile Include="Assets\extOSC\Examples\13) Match Pattern\Scripts\MatchPatternExample.cs" />
+    <Compile Include="Assets\extOSC\Examples\14) Marshalling\Scripts\MarshallingExample.cs" />
+    <Compile Include="Assets\extOSC\Examples\2) Value Types\Scripts\ValueTypesExample.cs" />
+    <Compile Include="Assets\extOSC\Examples\3) Events\Scripts\EventsExample.cs" />
+    <Compile Include="Assets\extOSC\Examples\4) Informers\Scripts\InformersExample.cs" />
+    <Compile Include="Assets\extOSC\Examples\6) Mapping\Scripts\MappingExample.cs" />
+    <Compile Include="Assets\extOSC\Examples\7) Scripting\Scripts\ScriptingExample.cs" />
+    <Compile Include="Assets\extOSC\Examples\9) Address Masks\Scripts\AddressMaskExample.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Events\OSCReceiverEvent.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Events\OSCReceiverEventArray.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Events\OSCReceiverEventBlob.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Events\OSCReceiverEventBool.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Events\OSCReceiverEventChar.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Events\OSCReceiverEventColor.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Events\OSCReceiverEventDouble.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Events\OSCReceiverEventFloat.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Events\OSCReceiverEventImpulse.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Events\OSCReceiverEventInt.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Events\OSCReceiverEventLong.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Events\OSCReceiverEventMessage.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Events\OSCReceiverEventMidi.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Events\OSCReceiverEventNull.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Events\OSCReceiverEventQuaternion.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Events\OSCReceiverEventRect.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Events\OSCReceiverEventString.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Events\OSCReceiverEventTimeTag.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Events\OSCReceiverEventVector2.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Events\OSCReceiverEventVector3.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Events\OSCReceiverEventVector4.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Informers\OSCTransmitterInformer.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Informers\OSCTransmitterInformerArray.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Informers\OSCTransmitterInformerBlob.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Informers\OSCTransmitterInformerBool.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Informers\OSCTransmitterInformerChar.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Informers\OSCTransmitterInformerColor.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Informers\OSCTransmitterInformerDouble.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Informers\OSCTransmitterInformerFloat.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Informers\OSCTransmitterInformerInt.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Informers\OSCTransmitterInformerLong.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Informers\OSCTransmitterInformerMidi.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Informers\OSCTransmitterInformerQuaternion.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Informers\OSCTransmitterInformerRect.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Informers\OSCTransmitterInformerString.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Informers\OSCTransmitterInformerTimeTag.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Informers\OSCTransmitterInformerVector2.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Informers\OSCTransmitterInformerVector3.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Informers\OSCTransmitterInformerVector4.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\IOSCReceiverComponent.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\IOSCTransmitterComponent.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Misc\OSCReceiverGyro.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Misc\OSCTransmitterPing.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\OSCComponent.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\OSCReceiverComponent.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\OSCTransmitterComponent.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Ping\OSCPingClient.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\Ping\OSCPingServer.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\ReceiverReflection\OSCReceiverReflection.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\ReceiverReflection\OSCReceiverReflectionArray.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\ReceiverReflection\OSCReceiverReflectionBlob.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\ReceiverReflection\OSCReceiverReflectionBool.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\ReceiverReflection\OSCReceiverReflectionChar.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\ReceiverReflection\OSCReceiverReflectionColor.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\ReceiverReflection\OSCReceiverReflectionDouble.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\ReceiverReflection\OSCReceiverReflectionFloat.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\ReceiverReflection\OSCReceiverReflectionInt.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\ReceiverReflection\OSCReceiverReflectionLong.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\ReceiverReflection\OSCReceiverReflectionMidi.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\ReceiverReflection\OSCReceiverReflectionQuaternion.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\ReceiverReflection\OSCReceiverReflectionRect.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\ReceiverReflection\OSCReceiverReflectionString.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\ReceiverReflection\OSCReceiverReflectionTimeTag.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\ReceiverReflection\OSCReceiverReflectionVector2.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\ReceiverReflection\OSCReceiverReflectionVector3.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Compontents\ReceiverReflection\OSCReceiverReflectionVector4.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Console\OSCConsole.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Console\OSCConsolePacket.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Events\OSCEvent.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Events\OSCEventArray.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Events\OSCEventBlob.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Events\OSCEventBool.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Events\OSCEventChar.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Events\OSCEventColor.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Events\OSCEventDateTime.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Events\OSCEventDouble.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Events\OSCEventFloat.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Events\OSCEventImpulse.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Events\OSCEventInt.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Events\OSCEventLong.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Events\OSCEventMessage.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Events\OSCEventMidi.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Events\OSCEventNull.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Events\OSCEventPacket.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Events\OSCEventQuaternion.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Events\OSCEventRect.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Events\OSCEventString.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Events\OSCEventVector2.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Events\OSCEventVector3.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Events\OSCEventVector4.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\IOSCBind.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Network\OSCReceiverBackend.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Network\OSCReceiverStandaloneBackend.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Network\OSCReceiverWindowsStoreBackend.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Network\OSCTransmitterBackend.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Network\OSCTransmitterStandaloneBackend.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Network\OSCTransmitterWindowsStoreBackend.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\OSCBase.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\OSCConverter.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\OSCPacket.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Packers\OSCPacker.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Packers\OSCPackerBlob.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Packers\OSCPackerChar.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Packers\OSCPackerColor.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Packers\OSCPackerDouble.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Packers\OSCPackerFalse.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Packers\OSCPackerFloat.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Packers\OSCPackerImpulse.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Packers\OSCPackerInt.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Packers\OSCPackerLong.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Packers\OSCPackerMidi.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Packers\OSCPackerNull.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Packers\OSCPackerString.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Packers\OSCPackerTimeTag.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Packers\OSCPackerTrue.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Reflection\OSCReflection.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Reflection\OSCReflectionMember.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Core\Reflection\OSCReflectionProperty.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Mapping\OSCMapBundle.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Mapping\OSCMapEnum.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Mapping\OSCMapMessage.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Mapping\OSCMapValue.cs" />
+    <Compile Include="Assets\extOSC\Scripts\OSCBind.cs" />
+    <Compile Include="Assets\extOSC\Scripts\OSCBundle.cs" />
+    <Compile Include="Assets\extOSC\Scripts\OSCEnums.cs" />
+    <Compile Include="Assets\extOSC\Scripts\OSCMatchPattern.cs" />
+    <Compile Include="Assets\extOSC\Scripts\OSCMessage.cs" />
+    <Compile Include="Assets\extOSC\Scripts\OSCMidi.cs" />
+    <Compile Include="Assets\extOSC\Scripts\OSCReceiver.cs" />
+    <Compile Include="Assets\extOSC\Scripts\OSCTransmitter.cs" />
+    <Compile Include="Assets\extOSC\Scripts\OSCUtilities.cs" />
+    <Compile Include="Assets\extOSC\Scripts\OSCValue.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Serialization\OSCSerializeAttribute.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Serialization\OSCSerializer.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Serialization\Packers\OSCPacker.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Serialization\Packers\OSCPackerArray.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Serialization\Packers\OSCPackerAttribute.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Serialization\Packers\OSCPackerBlob.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Serialization\Packers\OSCPackerBool.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Serialization\Packers\OSCPackerBounds.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Serialization\Packers\OSCPackerChar.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Serialization\Packers\OSCPackerColor.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Serialization\Packers\OSCPackerDictionary.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Serialization\Packers\OSCPackerDouble.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Serialization\Packers\OSCPackerFloat.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Serialization\Packers\OSCPackerInt.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Serialization\Packers\OSCPackerList.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Serialization\Packers\OSCPackerLong.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Serialization\Packers\OSCPackerMidi.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Serialization\Packers\OSCPackerQuaternion.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Serialization\Packers\OSCPackerRect.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Serialization\Packers\OSCPackerString.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Serialization\Packers\OSCPackerTimeTag.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Serialization\Packers\OSCPackerVector2.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Serialization\Packers\OSCPackerVector3.cs" />
+    <Compile Include="Assets\extOSC\Scripts\Serialization\Packers\OSCPackerVector4.cs" />
+    <Compile Include="Assets\extOSC\Scripts\UI\OSCButton.cs" />
+    <Compile Include="Assets\extOSC\Scripts\UI\OSCControls.cs" />
+    <Compile Include="Assets\extOSC\Scripts\UI\OSCMultiplySliders.cs" />
+    <Compile Include="Assets\extOSC\Scripts\UI\OSCPad.cs" />
+    <Compile Include="Assets\extOSC\Scripts\UI\OSCRotary.cs" />
+    <Compile Include="Assets\extOSC\Scripts\UI\OSCSlider.cs" />
+    <Compile Include="Assets\scripts\MenueScript.cs" />
+    <Compile Include="Assets\test.cs" />
+    <Compile Include="Assets\UIManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\extOSC\versions.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
+</Project>
