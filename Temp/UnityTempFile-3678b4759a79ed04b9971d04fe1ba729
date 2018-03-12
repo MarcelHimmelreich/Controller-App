@@ -1,0 +1,365 @@
+-debug
+-target:library
+-nowarn:0169
+-langversion:4
+-out:Temp/Assembly-CSharp.dll
+-unsafe
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.WebModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ParticlesLegacyModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll"
+-r:Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll
+-r:"A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll"
+-r:"A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll"
+-r:"A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll"
+-r:"A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll"
+-r:"A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll"
+-r:"A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll"
+-r:"A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll"
+-r:"A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll"
+-r:"A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll"
+-r:"A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll"
+-r:"A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll"
+-r:"A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/Editor/UnityEditor.UIAutomation.dll"
+-r:"A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll"
+-r:"A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll"
+-r:"A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll"
+-r:"A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll"
+-r:"A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll"
+-r:"A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll"
+-r:"A:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll"
+-r:"A:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll"
+-r:"A:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll"
+-r:"C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll"
+-r:C:/Users/Marcel/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll
+-r:C:/Users/Marcel/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/Editor/UnityEditor.Advertisements.dll
+-r:C:/Users/Marcel/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll
+-r:C:/Users/Marcel/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/Editor/UnityEditor.Analytics.dll
+-r:C:/Users/Marcel/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll
+-r:C:/Users/Marcel/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/Editor/UnityEditor.Purchasing.dll
+-r:C:/Users/Marcel/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll
+-define:UNITY_5_3_OR_NEWER
+-define:UNITY_5_4_OR_NEWER
+-define:UNITY_5_5_OR_NEWER
+-define:UNITY_5_6_OR_NEWER
+-define:UNITY_2017_1_OR_NEWER
+-define:UNITY_2017_2_OR_NEWER
+-define:UNITY_2017_3_OR_NEWER
+-define:UNITY_2017_3_1
+-define:UNITY_2017_3
+-define:UNITY_2017
+-define:PLATFORM_ARCH_64
+-define:UNITY_64
+-define:ENABLE_AUDIO
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_DUCK_TYPING
+-define:ENABLE_GENERICS
+-define:ENABLE_PVR_GI
+-define:ENABLE_MICROPHONE
+-define:ENABLE_MULTIPLE_DISPLAYS
+-define:ENABLE_PHYSICS
+-define:ENABLE_SPRITERENDERER_FLIPPING
+-define:ENABLE_SPRITES
+-define:ENABLE_GRID
+-define:ENABLE_TILEMAP
+-define:ENABLE_TERRAIN
+-define:ENABLE_RAKNET
+-define:ENABLE_DIRECTOR
+-define:ENABLE_UNET
+-define:ENABLE_LZMA
+-define:ENABLE_UNITYEVENTS
+-define:ENABLE_WEBCAM
+-define:ENABLE_WWW
+-define:ENABLE_CLOUD_SERVICES_COLLAB
+-define:ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS
+-define:ENABLE_CLOUD_SERVICES_ADS
+-define:ENABLE_CLOUD_HUB
+-define:ENABLE_CLOUD_PROJECT_ID
+-define:ENABLE_CLOUD_SERVICES_USE_WEBREQUEST
+-define:ENABLE_CLOUD_SERVICES_UNET
+-define:ENABLE_CLOUD_SERVICES_BUILD
+-define:ENABLE_CLOUD_LICENSE
+-define:ENABLE_EDITOR_HUB
+-define:ENABLE_EDITOR_HUB_LICENSE
+-define:ENABLE_WEBSOCKET_CLIENT
+-define:ENABLE_DIRECTOR_AUDIO
+-define:ENABLE_DIRECTOR_TEXTURE
+-define:ENABLE_TIMELINE
+-define:ENABLE_EDITOR_METRICS
+-define:ENABLE_EDITOR_METRICS_CACHING
+-define:ENABLE_NATIVE_ARRAY
+-define:ENABLE_SPRITE_MASKING
+-define:INCLUDE_DYNAMIC_GI
+-define:INCLUDE_GI
+-define:ENABLE_MONO_BDWGC
+-define:PLATFORM_SUPPORTS_MONO
+-define:RENDER_SOFTWARE_CURSOR
+-define:INCLUDE_PUBNUB
+-define:ENABLE_PLAYMODE_TESTS_RUNNER
+-define:ENABLE_VIDEO
+-define:ENABLE_RMGUI
+-define:ENABLE_PACKMAN
+-define:ENABLE_CUSTOM_RENDER_TEXTURE
+-define:ENABLE_STYLE_SHEETS
+-define:ENABLE_LOCALIZATION
+-define:PLATFORM_STANDALONE_WIN
+-define:PLATFORM_STANDALONE
+-define:UNITY_STANDALONE_WIN
+-define:UNITY_STANDALONE
+-define:ENABLE_SUBSTANCE
+-define:ENABLE_RUNTIME_GI
+-define:ENABLE_MOVIES
+-define:ENABLE_NETWORK
+-define:ENABLE_CRUNCH_TEXTURE_COMPRESSION
+-define:ENABLE_UNITYWEBREQUEST
+-define:ENABLE_CLOUD_SERVICES
+-define:ENABLE_CLOUD_SERVICES_ANALYTICS
+-define:ENABLE_CLOUD_SERVICES_PURCHASING
+-define:ENABLE_CLOUD_SERVICES_CRASH_REPORTING
+-define:ENABLE_EVENT_QUEUE
+-define:ENABLE_CLUSTERINPUT
+-define:ENABLE_VR
+-define:ENABLE_AR
+-define:ENABLE_WEBSOCKET_HOST
+-define:ENABLE_MONO
+-define:NET_2_0_SUBSET
+-define:ENABLE_PROFILER
+-define:DEBUG
+-define:TRACE
+-define:UNITY_ASSERTIONS
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_64
+-define:UNITY_EDITOR_WIN
+-define:ENABLE_NATIVE_ARRAY_CHECKS
+-define:UNITY_TEAM_LICENSE
+-define:ENABLE_VSTU
+Assets/ClientManager.cs
+"Assets/extOSC/Examples/1) Getting Started/Scripts/SimpleMessageReceiver.cs"
+"Assets/extOSC/Examples/1) Getting Started/Scripts/SimpleMessageTransmitter.cs"
+"Assets/extOSC/Examples/10) Serialization/Scripts/SerializationExample.cs"
+"Assets/extOSC/Examples/11) Ping/Scripts/PingExample.cs"
+"Assets/extOSC/Examples/12) Array/Scripts/ArrayExample.cs"
+"Assets/extOSC/Examples/13) Match Pattern/Scripts/MatchPatternExample.cs"
+"Assets/extOSC/Examples/14) Marshalling/Scripts/MarshallingExample.cs"
+"Assets/extOSC/Examples/2) Value Types/Scripts/ValueTypesExample.cs"
+"Assets/extOSC/Examples/3) Events/Scripts/EventsExample.cs"
+"Assets/extOSC/Examples/4) Informers/Scripts/InformersExample.cs"
+"Assets/extOSC/Examples/6) Mapping/Scripts/MappingExample.cs"
+"Assets/extOSC/Examples/7) Scripting/Scripts/ScriptingExample.cs"
+"Assets/extOSC/Examples/9) Address Masks/Scripts/AddressMaskExample.cs"
+Assets/extOSC/Scripts/Compontents/Events/OSCReceiverEvent.cs
+Assets/extOSC/Scripts/Compontents/Events/OSCReceiverEventArray.cs
+Assets/extOSC/Scripts/Compontents/Events/OSCReceiverEventBlob.cs
+Assets/extOSC/Scripts/Compontents/Events/OSCReceiverEventBool.cs
+Assets/extOSC/Scripts/Compontents/Events/OSCReceiverEventChar.cs
+Assets/extOSC/Scripts/Compontents/Events/OSCReceiverEventColor.cs
+Assets/extOSC/Scripts/Compontents/Events/OSCReceiverEventDouble.cs
+Assets/extOSC/Scripts/Compontents/Events/OSCReceiverEventFloat.cs
+Assets/extOSC/Scripts/Compontents/Events/OSCReceiverEventImpulse.cs
+Assets/extOSC/Scripts/Compontents/Events/OSCReceiverEventInt.cs
+Assets/extOSC/Scripts/Compontents/Events/OSCReceiverEventLong.cs
+Assets/extOSC/Scripts/Compontents/Events/OSCReceiverEventMessage.cs
+Assets/extOSC/Scripts/Compontents/Events/OSCReceiverEventMidi.cs
+Assets/extOSC/Scripts/Compontents/Events/OSCReceiverEventNull.cs
+Assets/extOSC/Scripts/Compontents/Events/OSCReceiverEventQuaternion.cs
+Assets/extOSC/Scripts/Compontents/Events/OSCReceiverEventRect.cs
+Assets/extOSC/Scripts/Compontents/Events/OSCReceiverEventString.cs
+Assets/extOSC/Scripts/Compontents/Events/OSCReceiverEventTimeTag.cs
+Assets/extOSC/Scripts/Compontents/Events/OSCReceiverEventVector2.cs
+Assets/extOSC/Scripts/Compontents/Events/OSCReceiverEventVector3.cs
+Assets/extOSC/Scripts/Compontents/Events/OSCReceiverEventVector4.cs
+Assets/extOSC/Scripts/Compontents/Informers/OSCTransmitterInformer.cs
+Assets/extOSC/Scripts/Compontents/Informers/OSCTransmitterInformerArray.cs
+Assets/extOSC/Scripts/Compontents/Informers/OSCTransmitterInformerBlob.cs
+Assets/extOSC/Scripts/Compontents/Informers/OSCTransmitterInformerBool.cs
+Assets/extOSC/Scripts/Compontents/Informers/OSCTransmitterInformerChar.cs
+Assets/extOSC/Scripts/Compontents/Informers/OSCTransmitterInformerColor.cs
+Assets/extOSC/Scripts/Compontents/Informers/OSCTransmitterInformerDouble.cs
+Assets/extOSC/Scripts/Compontents/Informers/OSCTransmitterInformerFloat.cs
+Assets/extOSC/Scripts/Compontents/Informers/OSCTransmitterInformerInt.cs
+Assets/extOSC/Scripts/Compontents/Informers/OSCTransmitterInformerLong.cs
+Assets/extOSC/Scripts/Compontents/Informers/OSCTransmitterInformerMidi.cs
+Assets/extOSC/Scripts/Compontents/Informers/OSCTransmitterInformerQuaternion.cs
+Assets/extOSC/Scripts/Compontents/Informers/OSCTransmitterInformerRect.cs
+Assets/extOSC/Scripts/Compontents/Informers/OSCTransmitterInformerString.cs
+Assets/extOSC/Scripts/Compontents/Informers/OSCTransmitterInformerTimeTag.cs
+Assets/extOSC/Scripts/Compontents/Informers/OSCTransmitterInformerVector2.cs
+Assets/extOSC/Scripts/Compontents/Informers/OSCTransmitterInformerVector3.cs
+Assets/extOSC/Scripts/Compontents/Informers/OSCTransmitterInformerVector4.cs
+Assets/extOSC/Scripts/Compontents/IOSCReceiverComponent.cs
+Assets/extOSC/Scripts/Compontents/IOSCTransmitterComponent.cs
+Assets/extOSC/Scripts/Compontents/Misc/OSCReceiverGyro.cs
+Assets/extOSC/Scripts/Compontents/Misc/OSCTransmitterPing.cs
+Assets/extOSC/Scripts/Compontents/OSCComponent.cs
+Assets/extOSC/Scripts/Compontents/OSCReceiverComponent.cs
+Assets/extOSC/Scripts/Compontents/OSCTransmitterComponent.cs
+Assets/extOSC/Scripts/Compontents/Ping/OSCPingClient.cs
+Assets/extOSC/Scripts/Compontents/Ping/OSCPingServer.cs
+Assets/extOSC/Scripts/Compontents/ReceiverReflection/OSCReceiverReflection.cs
+Assets/extOSC/Scripts/Compontents/ReceiverReflection/OSCReceiverReflectionArray.cs
+Assets/extOSC/Scripts/Compontents/ReceiverReflection/OSCReceiverReflectionBlob.cs
+Assets/extOSC/Scripts/Compontents/ReceiverReflection/OSCReceiverReflectionBool.cs
+Assets/extOSC/Scripts/Compontents/ReceiverReflection/OSCReceiverReflectionChar.cs
+Assets/extOSC/Scripts/Compontents/ReceiverReflection/OSCReceiverReflectionColor.cs
+Assets/extOSC/Scripts/Compontents/ReceiverReflection/OSCReceiverReflectionDouble.cs
+Assets/extOSC/Scripts/Compontents/ReceiverReflection/OSCReceiverReflectionFloat.cs
+Assets/extOSC/Scripts/Compontents/ReceiverReflection/OSCReceiverReflectionInt.cs
+Assets/extOSC/Scripts/Compontents/ReceiverReflection/OSCReceiverReflectionLong.cs
+Assets/extOSC/Scripts/Compontents/ReceiverReflection/OSCReceiverReflectionMidi.cs
+Assets/extOSC/Scripts/Compontents/ReceiverReflection/OSCReceiverReflectionQuaternion.cs
+Assets/extOSC/Scripts/Compontents/ReceiverReflection/OSCReceiverReflectionRect.cs
+Assets/extOSC/Scripts/Compontents/ReceiverReflection/OSCReceiverReflectionString.cs
+Assets/extOSC/Scripts/Compontents/ReceiverReflection/OSCReceiverReflectionTimeTag.cs
+Assets/extOSC/Scripts/Compontents/ReceiverReflection/OSCReceiverReflectionVector2.cs
+Assets/extOSC/Scripts/Compontents/ReceiverReflection/OSCReceiverReflectionVector3.cs
+Assets/extOSC/Scripts/Compontents/ReceiverReflection/OSCReceiverReflectionVector4.cs
+Assets/extOSC/Scripts/Core/Console/OSCConsole.cs
+Assets/extOSC/Scripts/Core/Console/OSCConsolePacket.cs
+Assets/extOSC/Scripts/Core/Events/OSCEvent.cs
+Assets/extOSC/Scripts/Core/Events/OSCEventArray.cs
+Assets/extOSC/Scripts/Core/Events/OSCEventBlob.cs
+Assets/extOSC/Scripts/Core/Events/OSCEventBool.cs
+Assets/extOSC/Scripts/Core/Events/OSCEventChar.cs
+Assets/extOSC/Scripts/Core/Events/OSCEventColor.cs
+Assets/extOSC/Scripts/Core/Events/OSCEventDateTime.cs
+Assets/extOSC/Scripts/Core/Events/OSCEventDouble.cs
+Assets/extOSC/Scripts/Core/Events/OSCEventFloat.cs
+Assets/extOSC/Scripts/Core/Events/OSCEventImpulse.cs
+Assets/extOSC/Scripts/Core/Events/OSCEventInt.cs
+Assets/extOSC/Scripts/Core/Events/OSCEventLong.cs
+Assets/extOSC/Scripts/Core/Events/OSCEventMessage.cs
+Assets/extOSC/Scripts/Core/Events/OSCEventMidi.cs
+Assets/extOSC/Scripts/Core/Events/OSCEventNull.cs
+Assets/extOSC/Scripts/Core/Events/OSCEventPacket.cs
+Assets/extOSC/Scripts/Core/Events/OSCEventQuaternion.cs
+Assets/extOSC/Scripts/Core/Events/OSCEventRect.cs
+Assets/extOSC/Scripts/Core/Events/OSCEventString.cs
+Assets/extOSC/Scripts/Core/Events/OSCEventVector2.cs
+Assets/extOSC/Scripts/Core/Events/OSCEventVector3.cs
+Assets/extOSC/Scripts/Core/Events/OSCEventVector4.cs
+Assets/extOSC/Scripts/Core/IOSCBind.cs
+Assets/extOSC/Scripts/Core/Network/OSCReceiverBackend.cs
+Assets/extOSC/Scripts/Core/Network/OSCReceiverStandaloneBackend.cs
+Assets/extOSC/Scripts/Core/Network/OSCReceiverWindowsStoreBackend.cs
+Assets/extOSC/Scripts/Core/Network/OSCTransmitterBackend.cs
+Assets/extOSC/Scripts/Core/Network/OSCTransmitterStandaloneBackend.cs
+Assets/extOSC/Scripts/Core/Network/OSCTransmitterWindowsStoreBackend.cs
+Assets/extOSC/Scripts/Core/OSCBase.cs
+Assets/extOSC/Scripts/Core/OSCConverter.cs
+Assets/extOSC/Scripts/Core/OSCPacket.cs
+Assets/extOSC/Scripts/Core/Packers/OSCPacker.cs
+Assets/extOSC/Scripts/Core/Packers/OSCPackerBlob.cs
+Assets/extOSC/Scripts/Core/Packers/OSCPackerChar.cs
+Assets/extOSC/Scripts/Core/Packers/OSCPackerColor.cs
+Assets/extOSC/Scripts/Core/Packers/OSCPackerDouble.cs
+Assets/extOSC/Scripts/Core/Packers/OSCPackerFalse.cs
+Assets/extOSC/Scripts/Core/Packers/OSCPackerFloat.cs
+Assets/extOSC/Scripts/Core/Packers/OSCPackerImpulse.cs
+Assets/extOSC/Scripts/Core/Packers/OSCPackerInt.cs
+Assets/extOSC/Scripts/Core/Packers/OSCPackerLong.cs
+Assets/extOSC/Scripts/Core/Packers/OSCPackerMidi.cs
+Assets/extOSC/Scripts/Core/Packers/OSCPackerNull.cs
+Assets/extOSC/Scripts/Core/Packers/OSCPackerString.cs
+Assets/extOSC/Scripts/Core/Packers/OSCPackerTimeTag.cs
+Assets/extOSC/Scripts/Core/Packers/OSCPackerTrue.cs
+Assets/extOSC/Scripts/Core/Reflection/OSCReflection.cs
+Assets/extOSC/Scripts/Core/Reflection/OSCReflectionMember.cs
+Assets/extOSC/Scripts/Core/Reflection/OSCReflectionProperty.cs
+Assets/extOSC/Scripts/Mapping/OSCMapBundle.cs
+Assets/extOSC/Scripts/Mapping/OSCMapEnum.cs
+Assets/extOSC/Scripts/Mapping/OSCMapMessage.cs
+Assets/extOSC/Scripts/Mapping/OSCMapValue.cs
+Assets/extOSC/Scripts/OSCBind.cs
+Assets/extOSC/Scripts/OSCBundle.cs
+Assets/extOSC/Scripts/OSCEnums.cs
+Assets/extOSC/Scripts/OSCMatchPattern.cs
+Assets/extOSC/Scripts/OSCMessage.cs
+Assets/extOSC/Scripts/OSCMidi.cs
+Assets/extOSC/Scripts/OSCReceiver.cs
+Assets/extOSC/Scripts/OSCTransmitter.cs
+Assets/extOSC/Scripts/OSCUtilities.cs
+Assets/extOSC/Scripts/OSCValue.cs
+Assets/extOSC/Scripts/Serialization/OSCSerializeAttribute.cs
+Assets/extOSC/Scripts/Serialization/OSCSerializer.cs
+Assets/extOSC/Scripts/Serialization/Packers/OSCPacker.cs
+Assets/extOSC/Scripts/Serialization/Packers/OSCPackerArray.cs
+Assets/extOSC/Scripts/Serialization/Packers/OSCPackerAttribute.cs
+Assets/extOSC/Scripts/Serialization/Packers/OSCPackerBlob.cs
+Assets/extOSC/Scripts/Serialization/Packers/OSCPackerBool.cs
+Assets/extOSC/Scripts/Serialization/Packers/OSCPackerBounds.cs
+Assets/extOSC/Scripts/Serialization/Packers/OSCPackerChar.cs
+Assets/extOSC/Scripts/Serialization/Packers/OSCPackerColor.cs
+Assets/extOSC/Scripts/Serialization/Packers/OSCPackerDictionary.cs
+Assets/extOSC/Scripts/Serialization/Packers/OSCPackerDouble.cs
+Assets/extOSC/Scripts/Serialization/Packers/OSCPackerFloat.cs
+Assets/extOSC/Scripts/Serialization/Packers/OSCPackerInt.cs
+Assets/extOSC/Scripts/Serialization/Packers/OSCPackerList.cs
+Assets/extOSC/Scripts/Serialization/Packers/OSCPackerLong.cs
+Assets/extOSC/Scripts/Serialization/Packers/OSCPackerMidi.cs
+Assets/extOSC/Scripts/Serialization/Packers/OSCPackerQuaternion.cs
+Assets/extOSC/Scripts/Serialization/Packers/OSCPackerRect.cs
+Assets/extOSC/Scripts/Serialization/Packers/OSCPackerString.cs
+Assets/extOSC/Scripts/Serialization/Packers/OSCPackerTimeTag.cs
+Assets/extOSC/Scripts/Serialization/Packers/OSCPackerVector2.cs
+Assets/extOSC/Scripts/Serialization/Packers/OSCPackerVector3.cs
+Assets/extOSC/Scripts/Serialization/Packers/OSCPackerVector4.cs
+Assets/extOSC/Scripts/UI/OSCButton.cs
+Assets/extOSC/Scripts/UI/OSCControls.cs
+Assets/extOSC/Scripts/UI/OSCMultiplySliders.cs
+Assets/extOSC/Scripts/UI/OSCPad.cs
+Assets/extOSC/Scripts/UI/OSCRotary.cs
+Assets/extOSC/Scripts/UI/OSCSlider.cs
+Assets/scripts/MenueScript.cs
+Assets/test.cs
+Assets/UIManager.cs
+-r:"A:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\System.Runtime.Serialization.dll"
+-r:"A:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\System.Xml.Linq.dll"
+-r:"A:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\UnityScript.dll"
+-r:"A:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\UnityScript.Lang.dll"
+-r:"A:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\Boo.Lang.dll"
+-sdk:unity

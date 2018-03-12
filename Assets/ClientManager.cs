@@ -32,6 +32,7 @@ namespace extOSC
         public int gameMode = 0;
         public int ballMode = 0;
         public int winCount = 10;
+        public int ballskin = 0;
         public int world = 0;
 
         public List<Client> clients;
@@ -53,7 +54,7 @@ namespace extOSC
         private const string _osc_gamemode = "/server/gamemode/";
         private const string _osc_replay = "/server/replay/";
         private const string _osc_server_start = "/server/start/";
-        //To Controller
+            //To Controller
         private const string _osc_control = "/control/controller/";
         private const string _osc_jump = "/control/jump/";
 
@@ -79,7 +80,7 @@ namespace extOSC
             _receiver.Bind(_osc_start, ReceiveStart);
             _receiver.Bind(_osc_end, ReceiveEnd);
             _receiver.Bind(_osc_score, ReceiveScoreUpdate);
-            _receiver.Bind(_osc_network_clients, receiveNetworkClients);
+            _receiver.Bind(_osc_network_clients, ReceiveNetworkClients);
         }
 
         // Update is called once per frame
@@ -112,12 +113,7 @@ namespace extOSC
             }
         }
 
-        void ReceiveConnection(OSCMessage message)
-        {
-
-        }
-
-        void receiveNetworkClients(OSCMessage message)
+        void ReceiveNetworkClients(OSCMessage message)
         {
             int clientcount = message.Values.Count/5;
             for (int i = 0; i<clientcount; ++i)
@@ -202,10 +198,10 @@ namespace extOSC
                 Debug.Log("Sending Game Mode Setting Message");
 
                 OSCMessage message = new OSCMessage(_osc_gamemode);
-                message.AddValue(OSCValue.String(localIP));
                 message.AddValue(OSCValue.Int(gameMode));
                 message.AddValue(OSCValue.Int(ballMode));
                 message.AddValue(OSCValue.Int(winCount));
+                message.AddValue(OSCValue.Int(ballskin));
 
                 _transmitter.Send(message);
 
