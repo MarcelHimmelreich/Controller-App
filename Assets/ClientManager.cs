@@ -15,9 +15,14 @@ namespace extOSC
         private OSCReceiver _receiver;
 
         //Network Data
+        public string deviceName;
         public string localIP;
+        public string serverIP;
+
         public bool admin;
         public bool connected;
+        public bool ready;
+        public bool replay;
 
         //Player Model ID
         public int modelID = 1;
@@ -27,20 +32,28 @@ namespace extOSC
         public int gameMode = 0;
         public int ballMode = 0;
         public int winCount = 10;
+        public int world = 0;
+
+        public List<Client> clients;
 
         //UI Manager
         public GameObject UIManager;
 
         //Receive
+        private const string _osc_network_clients = "/server/networkclients/";
+        private const string _osc_connect = "/client/connection/";
         private const string _osc_admin = "/client/admin/";
         private const string _osc_start = "/client/start/";
         private const string _osc_end = "/client/end/";
         private const string _osc_score = "/client/score/";
 
         //Send
-        private const string _osc_player = "/server/player/";
+            //To Server
+        private const string _osc_network_data = "/server/networkdata/";
         private const string _osc_gamemode = "/server/gamemode/";
-
+        private const string _osc_replay = "/server/replay/";
+        private const string _osc_server_start = "/server/start/";
+        //To Controller
         private const string _osc_control = "/control/controller/";
         private const string _osc_jump = "/control/jump/";
 
@@ -49,16 +62,24 @@ namespace extOSC
         // Use this for initialization
         void Start()
         {
+            deviceName = SystemInfo.deviceName;
             localIP = GetLocalIPAddress();
+
+            _transmitter = gameObject.AddComponent<OSCTransmitter>();
+
+            _transmitter.RemoteHost = serverIP;
+
+            _transmitter.RemotePort = 7000;
 
             _receiver = gameObject.AddComponent<OSCReceiver>();
 
-            _receiver.LocalPort = 7001;
+            _receiver.LocalPort = 6969;
 
             _receiver.Bind(_osc_admin, ReceiveAdmin);
             _receiver.Bind(_osc_start, ReceiveStart);
             _receiver.Bind(_osc_end, ReceiveEnd);
             _receiver.Bind(_osc_score, ReceiveScoreUpdate);
+            _receiver.Bind(_osc_network_clients, receiveNetworkClients);
         }
 
         // Update is called once per frame
@@ -67,27 +88,78 @@ namespace extOSC
 
         }
 
-
+        public void SetServerIP(string ip)
+        {
+            serverIP = ip;
+            _transmitter.RemoteHost = serverIP;
+        }
 
         void ReceiveAdmin(OSCMessage message)
         {
             Debug.Log("Received Message: " + message);
             if (!connected)
             {
-                if (message.Values[0].ToString() == localIP)
+                admin = message.Values[0].BoolValue;
+                connected = true;
+                if (admin)
                 {
-                    admin = message.Values[1].BoolValue;
-                    connected = true;
-                    if (admin)
-                    {
-                        UIManager.GetComponent<UIManager>().SwitchScreen(1);
-                    }
-                    else
-                    {
-                        UIManager.GetComponent<UIManager>().SwitchScreen(2);
-                    }
+                    UIManager.GetComponent<UIManager>().SwitchScreen(1);
+                }
+                else
+                {
+                    UIManager.GetComponent<UIManager>().SwitchScreen(2);
                 }
             }
+        }
+
+        void ReceiveConnection(OSCMessage message)
+        {
+
+        }
+
+        void receiveNetworkClients(OSCMessage message)
+        {
+            int clientcount = message.Values.Count/5;
+            for (int i = 0; i<clientcount; ++i)
+            {
+                bool found = false;
+                int clientid = 0;
+                for (int o = 0; o < clients.Count; ++i)
+                {
+                    if (clients[o].localip == message.Values[i * 5].StringValue)
+                    {
+                        found = true;
+                        clientid = o;
+                    }
+                }
+
+                if (found)
+                {
+                    //Update Client
+                    clients[clientid].localip = message.Values[i*5 + 0].StringValue;
+                    clients[clientid].name = message.Values[i * 5 + 1].StringValue;
+                    clients[clientid].modelID = message.Values[i * 5 + 2].IntValue;
+                    clients[clientid].teamID = message.Values[i * 5 + 3].IntValue;
+                    clients[clientid].ready = message.Values[i * 5 + 4].BoolValue;
+
+                    UIManager.GetComponent<UIManager>().UpdateClients();
+                }
+                else
+                {
+                    //Create new Client
+                    Client newclient = new Client();
+                    newclient.localip = message.Values[i * 5 + 0].StringValue;
+                    newclient.name = message.Values[i * 5 + 1].StringValue;
+                    newclient.modelID = message.Values[i * 5 + 2].IntValue;
+                    newclient.teamID = message.Values[i * 5 + 3].IntValue;
+                    newclient.ready = message.Values[i * 5 + 4].BoolValue;
+
+                    clients.Add(newclient);
+
+                    UIManager.GetComponent<UIManager>().UpdateClients();
+                }
+            }
+
         }
 
         void ReceiveStart(OSCMessage message)
@@ -102,35 +174,69 @@ namespace extOSC
 
         void ReceiveScoreUpdate(OSCMessage message)
         {
+            int teams = message.Values.Count/2;
+            for (int i = 0; i < teams; ++i)
+            {
 
+            }
         }
 
-
-        public void SendPlayer()
+        public void SendClient()
         {
-            Debug.Log("Sending Player Setting Message");
+            Debug.Log("Sending Client Message");
 
-            OSCMessage message = new OSCMessage(_osc_player);
+            OSCMessage message = new OSCMessage(_osc_network_data);
+            message.AddValue(OSCValue.String(deviceName));
+            message.AddValue(OSCValue.String(localIP));
             message.AddValue(OSCValue.Int(modelID));
             message.AddValue(OSCValue.Int(teamID));
+            message.AddValue(OSCValue.Bool(ready));
 
             _transmitter.Send(message);
-
-            UIManager.GetComponent<UIManager>().SwitchScreen(3);
         }
+
         public void SendGameMode()
         {
-            Debug.Log("Sending Game Mode Setting Message");
+            if (admin)
+            {
+                Debug.Log("Sending Game Mode Setting Message");
 
-            OSCMessage message = new OSCMessage(_osc_admin);
+                OSCMessage message = new OSCMessage(_osc_gamemode);
+                message.AddValue(OSCValue.String(localIP));
+                message.AddValue(OSCValue.Int(gameMode));
+                message.AddValue(OSCValue.Int(ballMode));
+                message.AddValue(OSCValue.Int(winCount));
+
+                _transmitter.Send(message);
+
+                UIManager.GetComponent<UIManager>().SwitchScreen(2);
+            }
+        }
+
+        public void SendReplay()
+        {
+            OSCMessage message = new OSCMessage(_osc_replay);
             message.AddValue(OSCValue.String(localIP));
-            message.AddValue(OSCValue.Int(gameMode));
-            message.AddValue(OSCValue.Int(ballMode));
-            message.AddValue(OSCValue.Int(winCount));
+            message.AddValue(OSCValue.Bool(replay));
 
             _transmitter.Send(message);
+        }
 
-            UIManager.GetComponent<UIManager>().SwitchScreen(2);
+        public void SendStart()
+        {
+            OSCMessage message = new OSCMessage(_osc_server_start);
+
+            _transmitter.Send(message);
+        }
+
+        public void SendMovement(int value)
+        {
+            Debug.Log("Sending Jump Message");
+
+            OSCMessage message = new OSCMessage(_osc_control);
+            message.AddValue(OSCValue.Int(value));
+
+            _transmitter.Send(message);
         }
 
         public void SendJump()
@@ -138,7 +244,6 @@ namespace extOSC
             Debug.Log("Sending Jump Message");
 
             OSCMessage message = new OSCMessage(_osc_jump);
-            message.AddValue(OSCValue.String(localIP));
 
             _transmitter.Send(message);
         }
@@ -159,6 +264,11 @@ namespace extOSC
                 }
             }
             return localIP;
+        }
+
+        public void UpdateClients()
+        {
+
         }
 
         public void AddTeam(int number)

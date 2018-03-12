@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour {
 
+    public GameObject ClientManager;
+
     public List<GameObject> ModelList;
     public GameObject Character;
     public Transform Spawn;
@@ -25,6 +27,11 @@ public class UIManager : MonoBehaviour {
     {
 		
 	}
+
+    public void UpdateClients()
+    {
+
+    }
 
     public void UpdateScore(List<int> scores)
     {
