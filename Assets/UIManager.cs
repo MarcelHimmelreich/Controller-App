@@ -48,8 +48,12 @@ public class UIManager : MonoBehaviour {
             {
                 if (Character[i] != ModelList[ClientManager.clients[i].modelID])
                 {
-                    Destroy(Character[i]);
-                    Character.Add(Instantiate(ModelList[ClientManager.clients[i].modelID]));
+                    if (Character[i] != null)
+                    {
+                        Destroy(Character[i]);
+
+                    }
+                    Character.Add(Instantiate(ModelList[ClientManager.clients[i].modelID]) as GameObject) ;
                 }
                 if (Team[i] != Team[ClientManager.clients[i].teamID])
                 {
@@ -167,23 +171,28 @@ public class UIManager : MonoBehaviour {
     //Ready
     public void Connected()
     {
+        //Start Player Selection
         CameraManager.ChangePosition(1);
     }
 
     //Ready
     public void CharacterSelected()
     {
+        //Change to Team Selection
         CameraManager.ChangePosition(2);
+        ClientManager.SendClient();
+        UpdateClients();
     }
 
     //Ready
     public void ChooseCharacter()
     {
-        if (Character[0])
+        if (Character[0] != null)
         {
-            Destroy(Character[0]);
+            Destroy(Character[0].gameObject);
+            Character.RemoveAt(0);
         }
-        Character[0] = Instantiate(ModelList[ClientManager.modelID],Spawn[0]);
+        Character[0] = Instantiate(ModelList[ClientManager.modelID],Spawn[0]) as GameObject;
     }
 
     //Ready

@@ -104,11 +104,13 @@ public class ClientManager : MonoBehaviour
             connected = true;
             if (admin)
             {
-                UIManager.GetComponent<UIManager>().SwitchScreen(1);
+                UIManager.SwitchScreen(1);
+                UIManager.ChooseCharacter();
             }
             else
             {
-                UIManager.GetComponent<UIManager>().SwitchScreen(2);
+                UIManager.SwitchScreen(2);
+                UIManager.ChooseCharacter();
             }
         }
     }
@@ -213,8 +215,8 @@ public class ClientManager : MonoBehaviour
             message.AddValue(OSCValue.Int(world));
 
             _transmitter.Send(message);
-
-            UIManager.GetComponent<UIManager>().SwitchScreen(2);
+            UIManager.SwitchScreen(2);
+            UIManager.CameraManager.ChangePosition(1);
         }
     }
 
@@ -296,6 +298,7 @@ public class ClientManager : MonoBehaviour
         {
             teamID = 0;
         }
+        SendClient();
         UIManager.UpdateClients();
     }
 
