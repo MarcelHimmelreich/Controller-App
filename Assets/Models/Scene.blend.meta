@@ -1,0 +1,289 @@
+fileFormatVersion: 2
+guid: 1a731493eac985746947207ad9eaa8d7
+timeCreated: 1511794434
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Coral
+    100002: Cube
+    100004: Cube_001
+    100006: Cube_002
+    100008: Cube_003
+    100010: Cube_004
+    100012: Cube_005
+    100014: Cube_006
+    100016: Cylinder_001
+    100018: Cylinder_003
+    100020: PalmTree
+    100022: Plane
+    100024: Plane_001
+    100026: Plane_005
+    100028: Plane_006
+    100030: Plane_007
+    100032: Plane_008
+    100034: Plane_009
+    100036: Rock1
+    100038: Rock2
+    100040: rock2
+    100042: Rock3
+    100044: Sand
+    100046: //RootNode
+    100048: Water
+    400000: Coral
+    400002: Cube
+    400004: Cube_001
+    400006: Cube_002
+    400008: Cube_003
+    400010: Cube_004
+    400012: Cube_005
+    400014: Cube_006
+    400016: Cylinder_001
+    400018: Cylinder_003
+    400020: PalmTree
+    400022: Plane
+    400024: Plane_001
+    400026: Plane_005
+    400028: Plane_006
+    400030: Plane_007
+    400032: Plane_008
+    400034: Plane_009
+    400036: Rock1
+    400038: Rock2
+    400040: rock2
+    400042: Rock3
+    400044: Sand
+    400046: //RootNode
+    400048: Water
+    2300000: Coral
+    2300002: Cube
+    2300004: Cube_001
+    2300006: Cube_002
+    2300008: Cube_003
+    2300010: Cube_004
+    2300012: Cube_005
+    2300014: Cube_006
+    2300016: Cylinder_001
+    2300018: Cylinder_003
+    2300020: PalmTree
+    2300022: Plane
+    2300024: Plane_001
+    2300026: Plane_005
+    2300028: Plane_006
+    2300030: Plane_007
+    2300032: Plane_008
+    2300034: Plane_009
+    2300036: Rock1
+    2300038: Rock2
+    2300040: rock2
+    2300042: Rock3
+    2300044: Sand
+    2300046: Water
+    3300000: Coral
+    3300002: Cube
+    3300004: Cube_001
+    3300006: Cube_002
+    3300008: Cube_003
+    3300010: Cube_004
+    3300012: Cube_005
+    3300014: Cube_006
+    3300016: Cylinder_001
+    3300018: Cylinder_003
+    3300020: PalmTree
+    3300022: Plane
+    3300024: Plane_001
+    3300026: Plane_005
+    3300028: Plane_006
+    3300030: Plane_007
+    3300032: Plane_008
+    3300034: Plane_009
+    3300036: Rock1
+    3300038: Rock2
+    3300040: rock2
+    3300042: Rock3
+    3300044: Sand
+    3300046: Water
+    4300000: Cube_006
+    4300002: Cube_005
+    4300004: Cube_004
+    4300006: Plane_001
+    4300008: Plane
+    4300010: Cube_003
+    4300012: Cube_002
+    4300014: Cube_001
+    4300016: Cube
+    4300018: rock2
+    4300020: Rock2
+    4300022: Rock1
+    4300024: Rock3
+    4300026: PalmTree
+    4300028: Cylinder_003
+    4300030: Plane_009
+    4300032: Plane_008
+    4300034: Plane_007
+    4300036: Plane_006
+    4300038: Plane_005
+    4300040: Cylinder_001
+    4300042: Coral
+    4300044: Water
+    4300046: Sand
+    7400000: Default Take
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 0824e98af29d88346a3dc6b927746860, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_001
+    second: {fileID: 2100000, guid: 85d1a3e7986881145916d3801e5fdcc2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_002
+    second: {fileID: 2100000, guid: 34431b3a5b209824998ec149bcfd0afa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_003
+    second: {fileID: 2100000, guid: 52f61407dc4272048a7131c70c461f0e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_004
+    second: {fileID: 2100000, guid: 9a147e7232e937c428a71b008714dcf0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_005
+    second: {fileID: 2100000, guid: e00476deeab79b143bbc7f581231aa3c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_006
+    second: {fileID: 2100000, guid: e7f790840a2429c4db688198c6a234f4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_007
+    second: {fileID: 2100000, guid: 31a25eb82d0379140a526feb398a5155, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_008
+    second: {fileID: 2100000, guid: 16ba2e3d13f3ba045822fe900190ccca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_009
+    second: {fileID: 2100000, guid: 548d11138e86c1940968f1792d01c297, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_010
+    second: {fileID: 2100000, guid: 04ebeab063fe3404ea397d8bdbda7c79, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_011
+    second: {fileID: 2100000, guid: 5126081905e5e604f8a22d8e5d2f5bf3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_013
+    second: {fileID: 2100000, guid: 3c5b2e1fa0d475d4cb988a142866652a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal
+    second: {fileID: 2100000, guid: af4c3b92005548f4e88f77af3a538a03, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: unnamed
+    second: {fileID: 2100000, guid: 12b23f1f975255b4db7a9e6d70ac5b1e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood
+    second: {fileID: 2100000, guid: 780b51adfdb975f46bad5c21eb01f596, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

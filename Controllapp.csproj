@@ -288,6 +288,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Client.cs" />
     <Compile Include="Assets\ClientManager.cs" />
     <Compile Include="Assets\extOSC\Examples\1) Getting Started\Scripts\SimpleMessageReceiver.cs" />
     <Compile Include="Assets\extOSC\Examples\1) Getting Started\Scripts\SimpleMessageTransmitter.cs" />
