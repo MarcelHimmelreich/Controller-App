@@ -15,16 +15,33 @@ public class UIManager : MonoBehaviour {
     public List<GameObject> ModelList;
     public List<GameObject> BallList;
     public List<GameObject> WorldList;
-    public List<Text> Modelist;
+    public Text WinCount;
+    public Text ModeText;
+    public Text BallSkinText;
+    public Text WorldmodeText;
+    public Text BallModeText;
     public GameObject Ball;
     public Transform BallSpawn;
+
     public List<GameObject> Character;
+    public GameObject SelectedCharacter;
+    public GameObject SelectedSpawn;
+
+    //Team Selection
+    public List<Text> Name;
     public List<Text> Team;
+    public List<Text> Ready;
+
     public List<Transform> Spawn;
     public List<GameObject> ScreenList;
+
     public GameObject GameScreen;
     public GameObject WaitingScreen;
     public List<Text> Score;
+    public GameObject StartButton;
+
+    //Debug
+    public bool clear = false;
 
 
 	// Use this for initialization
@@ -36,29 +53,34 @@ public class UIManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-		
+        if (clear)
+        {
+            UpdateClients();
+            clear = false;
+        }       
 	}
 
     //Ready
     public void UpdateClients()
     {
+        foreach (GameObject character in Character)
+        {
+            Destroy(character);
+        }
+        Character.Clear();
         for (int i = 0; i< ClientManager.clients.Count; ++i)
         {
-            if( ClientManager.clients[i].localip != ClientManager.localIP)
+            Character.Add(Instantiate(ModelList[ClientManager.clients[i].modelID],Spawn[i]) as GameObject);
+            Name[i].text = ClientManager.clients[i].name;
+            Team[i].text = "Team " + (1 + ClientManager.clients[i].teamID).ToString();
+            if (ClientManager.clients[i].ready)
             {
-                if (Character[i] != ModelList[ClientManager.clients[i].modelID])
-                {
-                    if (Character[i] != null)
-                    {
-                        Destroy(Character[i]);
-
-                    }
-                    Character.Add(Instantiate(ModelList[ClientManager.clients[i].modelID]) as GameObject) ;
-                }
-                if (Team[i] != Team[ClientManager.clients[i].teamID])
-                {
-                    Team[i].text = ClientManager.clients[i].teamID.ToString();
-                }
+                Ready[i].text = "Ready";
+                Character[i].GetComponent<Animator>().Play("cheer");
+            }
+            else
+            {
+                Ready[i].text = "";
             }
         }
     }
@@ -78,7 +100,7 @@ public class UIManager : MonoBehaviour {
         if (mode == 0)
         {
             //Win Count
-            Modelist[mode].text = value.ToString();
+            WinCount.text = value.ToString();
         }
         else if (mode == 1)
         {
@@ -86,17 +108,17 @@ public class UIManager : MonoBehaviour {
             if (value == 0)
             {
                 //Normal
-                Modelist[mode].text = "Normal";
+                ModeText.text = "Normal";
             }
             else if (value == 1)
             {
                 //Fury
-                Modelist[mode].text = "Fury";
+                ModeText.text = "Fury";
             }
             else if (value == 2)
             {
                 //Insane
-                Modelist[mode].text = "Insane";
+                ModeText.text = "Insane";
             }
         }
         else if (mode == 2)
@@ -105,17 +127,17 @@ public class UIManager : MonoBehaviour {
             if (value == 0)
             {
                 //Island
-                Modelist[mode].text = "Island";
+                WorldmodeText.text = "Island";
             }
             else if (value == 1)
             {
                 //Ocean
-                Modelist[mode].text = "Ocean";
+                WorldmodeText.text = "Ocean";
             }
             else if (value == 2)
             {
                 //Ancient
-                Modelist[mode].text = "Ancient";
+                WorldmodeText.text = "Ancient";
             }
         }
         else if (mode == 3)
@@ -124,17 +146,17 @@ public class UIManager : MonoBehaviour {
             if (value == 0)
             {
                 //small
-                Modelist[mode].text = "Tiny";
+                BallModeText.text = "Tiny";
             }
             else if (value == 1)
             {
                 //normal
-                Modelist[mode].text = "Normal";
+                BallModeText.text = "Normal";
             }
             else if (value == 2)
             {
                 //large
-                Modelist[mode].text = "Large";
+                BallModeText.text = "Large";
             }
         }
         else if (mode == 4)
@@ -143,17 +165,17 @@ public class UIManager : MonoBehaviour {
             if (value == 0)
             {
                 //Beach
-                Modelist[mode].text = "Beach";
+                BallSkinText.text = "Beach";
             }
             else if (value == 1)
             {
-                //Stone
-                Modelist[mode].text = "Stone";
+                //Stonee
+                BallSkinText.text = "Stone";
             }
             else if (value == 2)
             {
                 //Balloon
-                Modelist[mode].text = "Balloon";
+                BallSkinText.text = "Balloon";
             }
         }
     }
@@ -180,19 +202,24 @@ public class UIManager : MonoBehaviour {
     {
         //Change to Team Selection
         CameraManager.ChangePosition(2);
+        SwitchScreen(3);
         ClientManager.SendClient();
         UpdateClients();
+        if (ClientManager.admin)
+        {
+            StartButton.SetActive(true);
+        }
     }
 
     //Ready
     public void ChooseCharacter()
     {
-        if (Character[0] != null)
+        if (SelectedCharacter != null)
         {
-            Destroy(Character[0].gameObject);
-            Character.RemoveAt(0);
+            Destroy(SelectedCharacter);
         }
-        Character[0] = Instantiate(ModelList[ClientManager.modelID],Spawn[0]) as GameObject;
+        SelectedCharacter = Instantiate(ModelList[ClientManager.modelID],SelectedSpawn.transform) as GameObject;
+        
     }
 
     //Ready
@@ -212,6 +239,13 @@ public class UIManager : MonoBehaviour {
         CameraManager.ChangePosition(0);
         SwitchScreen(0);
         CameraManager.ChangePosition(0);
+    }
+
+    public void ReadyButton(bool ready)
+    {
+        ClientManager.ready = ready;
+        ClientManager.SendClient();
+        UpdateClients();
     }
 
     //Ready
@@ -241,6 +275,7 @@ public class UIManager : MonoBehaviour {
     {
         //Switch to End Screen
         SwitchScreen(4);
+        CameraManager.ChangePosition(2);
         GameScreen.active = false;
         WaitingScreen.active = true;
     }
@@ -249,6 +284,7 @@ public class UIManager : MonoBehaviour {
     public void StartGame()
     {
         //Switch to Controller Screen   
+        CameraManager.ChangePosition(3);
         GameScreen.active = true;
         WaitingScreen.active = false;
     }

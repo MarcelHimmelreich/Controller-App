@@ -9,6 +9,7 @@ public class ClientManager : MonoBehaviour
 {
     //OSC
     private OSCTransmitter _transmitter;
+    private OSCTransmitter _transmitter_control;
     private OSCReceiver _receiver;
 
     //Network Data
@@ -19,6 +20,7 @@ public class ClientManager : MonoBehaviour
     public bool admin;
     public bool connected;
     public bool ready;
+    public bool start;
 
     public List<Client> clients;
 
@@ -70,6 +72,12 @@ public class ClientManager : MonoBehaviour
 
         _transmitter.RemotePort = 7000;
 
+        _transmitter_control = gameObject.AddComponent<OSCTransmitter>();
+
+        _transmitter_control.RemoteHost = serverIP;
+
+        _transmitter_control.RemotePort = 6968;
+
         _receiver = gameObject.AddComponent<OSCReceiver>();
 
         _receiver.LocalPort = 6969;
@@ -85,6 +93,18 @@ public class ClientManager : MonoBehaviour
     void Update()
     {
 
+    }
+
+    private void FixedUpdate()
+    {
+        if (start)
+        {
+            SendMovement(CnControls.CnInputManager.GetAxis("Horizontal"));
+        }
+        if (CnControls.CnInputManager.GetButton("Jump"))
+        {
+            SendJump();
+        }
     }
 
     //Ready
@@ -111,6 +131,7 @@ public class ClientManager : MonoBehaviour
             {
                 UIManager.SwitchScreen(2);
                 UIManager.ChooseCharacter();
+                UIManager.CameraManager.ChangePosition(1);
             }
         }
     }
@@ -118,14 +139,15 @@ public class ClientManager : MonoBehaviour
     //Ready
     void ReceiveNetworkClients(OSCMessage message)
     {
+        Debug.Log("Received Clients");
         int clientcount = message.Values.Count / 5;
         for (int i = 0; i < clientcount; ++i)
         {
             bool found = false;
             int clientid = 0;
-            for (int o = 0; o < clients.Count; ++i)
+            for (int o = 0; o < clients.Count; ++o)
             {
-                if (clients[o].localip == message.Values[i * 5].StringValue)
+                if (clients[o].localip == message.Values[o * 5].StringValue)
                 {
                     found = true;
                     clientid = o;
@@ -135,17 +157,18 @@ public class ClientManager : MonoBehaviour
             if (found)
             {
                 //Update Client
-                clients[clientid].localip = message.Values[i * 5 + 0].StringValue;
-                clients[clientid].name = message.Values[i * 5 + 1].StringValue;
-                clients[clientid].modelID = message.Values[i * 5 + 2].IntValue;
-                clients[clientid].teamID = message.Values[i * 5 + 3].IntValue;
-                clients[clientid].ready = message.Values[i * 5 + 4].BoolValue;
+                clients[clientid].localip = message.Values[clientid * 5 + 0].StringValue;
+                clients[clientid].name = message.Values[clientid * 5 + 1].StringValue;
+                clients[clientid].modelID = message.Values[clientid * 5 + 2].IntValue;
+                clients[clientid].teamID = message.Values[clientid * 5 + 3].IntValue;
+                clients[clientid].ready = message.Values[clientid * 5 + 4].BoolValue;
 
                 UIManager.GetComponent<UIManager>().UpdateClients();
             }
             else
             {
                 //Create new Client
+
                 Client newclient = new Client();
                 newclient.localip = message.Values[i * 5 + 0].StringValue;
                 newclient.name = message.Values[i * 5 + 1].StringValue;
@@ -158,6 +181,7 @@ public class ClientManager : MonoBehaviour
                 UIManager.GetComponent<UIManager>().UpdateClients();
             }
         }
+        UIManager.GetComponent<UIManager>().UpdateClients();
 
     }
 
@@ -165,17 +189,20 @@ public class ClientManager : MonoBehaviour
     void ReceiveStart(OSCMessage message)
     {
         UIManager.GetComponent<UIManager>().StartGame();
+        start = true;
     }
 
     //Ready
     void ReceiveEnd(OSCMessage message)
     {
+        start = false;
         UIManager.GetComponent<UIManager>().EndGame(message.Values[0].BoolValue);
     }
 
     //Ready
     void ReceiveScoreUpdate(OSCMessage message)
     {
+        Debug.Log("Receiving Score Message: " + message);
         int teams = message.Values.Count;
         List<int> score = new List<int>();
         for (int i = 0; i < teams; ++i)
@@ -239,24 +266,25 @@ public class ClientManager : MonoBehaviour
     }
 
     //Ready
-    public void SendMovement(int value)
+    public void SendMovement(float value)
     {
-        Debug.Log("Sending Jump Message");
-
+        Debug.Log("Sending Movement Message: " + value);
+        _transmitter_control.RemoteHost = serverIP;
         OSCMessage message = new OSCMessage(_osc_control);
-        message.AddValue(OSCValue.Int(value));
+        message.AddValue(OSCValue.String(localIP));
+        message.AddValue(OSCValue.Float(value));
 
-        _transmitter.Send(message);
+        _transmitter_control.Send(message);
     }
 
     //Ready
     public void SendJump()
     {
         Debug.Log("Sending Jump Message");
-
+        _transmitter_control.RemoteHost = serverIP;
         OSCMessage message = new OSCMessage(_osc_jump);
-
-        _transmitter.Send(message);
+        message.AddValue(OSCValue.String(localIP));
+        _transmitter_control.Send(message);
     }
 
     //Ready
@@ -289,17 +317,20 @@ public class ClientManager : MonoBehaviour
     //Ready
     public void SelectTeam(int number)
     {
-        teamID += number;
-        if (teamID < 0)
+        if (!ready)
         {
-            teamID = clients.Count - 1;
+            teamID += number;
+            if (teamID < 0)
+            {
+                teamID = clients.Count - 1;
+            }
+            else if (teamID > clients.Count - 1)
+            {
+                teamID = 0;
+            }
+            SendClient();
+            UIManager.UpdateClients();
         }
-        else if (teamID > clients.Count - 1)
-        {
-            teamID = 0;
-        }
-        SendClient();
-        UIManager.UpdateClients();
     }
 
     //Ready
@@ -330,6 +361,7 @@ public class ClientManager : MonoBehaviour
             gameMode = 0;
         }
         UIManager.UpdateModeText(1, gameMode);
+        Debug.Log("Select GameMode: " + gameMode);
     }
 
     //Ready
@@ -345,6 +377,7 @@ public class ClientManager : MonoBehaviour
             world = 0;
         }
         UIManager.UpdateModeText(2, world);
+        Debug.Log("Select World: " + world);
     }
 
     //Ready
@@ -360,6 +393,7 @@ public class ClientManager : MonoBehaviour
             ballMode = 0;
         }
         UIManager.UpdateModeText(3, ballMode);
+        Debug.Log("Select Ballmode: " + ballMode);
     }
 
     //Ready
@@ -376,17 +410,18 @@ public class ClientManager : MonoBehaviour
         }
         UIManager.UpdateModeText(4, ballskin);
         UIManager.ChooseBall(ballskin);
+        Debug.Log("Select Ballskin: " + ballskin);
     }
 
     //Ready
     public void SelectCharacter(int value)
     {
-        ballskin += value;
+        modelID += value;
         if (modelID < 0)
         {
             modelID = UIManager.ModelList.Count - 1;
         }
-        else if (modelID > UIManager.ModelList.Count)
+        else if (modelID > UIManager.ModelList.Count-1)
         {
             modelID = 0;
         }
