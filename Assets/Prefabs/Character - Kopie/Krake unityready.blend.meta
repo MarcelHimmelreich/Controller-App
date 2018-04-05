@@ -1,57 +1,63 @@
 fileFormatVersion: 2
-guid: 03cb6b114debad14c9f6ae65cd16d484
-timeCreated: 1521636839
+guid: a76302bd2296bed46bc870c8705f72af
+timeCreated: 1521636822
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: Armature
-    100002: Character
-    100004: chest
+    100002: chest
+    100004: downleg_L
     100006: downleg_R
-    100008: //RootNode
-    100010: foot_L
-    100012: foot_R
-    100014: head
-    100016: legdown_L
-    100018: root
-    100020: thigh_L
-    100022: thigh_R
-    100024: toe_L
-    100026: toe_R
+    100008: eyes
+    100010: eyes_base
+    100012: eyes_target
+    100014: foot_L
+    100016: foot_R
+    100018: head
+    100020: headtop
+    100022: //RootNode
+    100024: root
+    100026: thigh_L
+    100028: thigh_R
+    100030: toe_L
+    100032: toe_R
     400000: Armature
-    400002: Character
-    400004: chest
+    400002: chest
+    400004: downleg_L
     400006: downleg_R
-    400008: //RootNode
-    400010: foot_L
-    400012: foot_R
-    400014: head
-    400016: legdown_L
-    400018: root
-    400020: thigh_L
-    400022: thigh_R
-    400024: toe_L
-    400026: toe_R
-    2100000: Material_003
-    2100002: Auge
-    2100004: Material
-    2100006: F_sse
-    2100008: Schnabel
-    2100010: Material_001
-    2100012: Material_002
-    4300000: Character
+    400008: eyes
+    400010: eyes_base
+    400012: eyes_target
+    400014: foot_L
+    400016: foot_R
+    400018: head
+    400020: headtop
+    400022: //RootNode
+    400024: root
+    400026: thigh_L
+    400028: thigh_R
+    400030: toe_L
+    400032: toe_R
+    2100000: eyes
+    2100002: Kopf
+    2100004: Haut
+    2100006: Latzhose
+    2100008: Schuhe
+    2100010: Sohle
+    2100012: Tasche
+    4300000: eyes
     7400000: Default Take
     7400002: ArmatureAction
-    7400004: Walk
-    7400006: Jump
+    7400004: walk
+    7400006: jump
     7400008: idle (1)
     7400010: idle (2)
-    7400012: bored
-    7400014: loose
-    7400016: cheer
+    7400012: hit
+    7400014: cheer
+    7400016: loose
     9500000: //RootNode
-    13700000: Character
+    13700000: eyes
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -80,7 +86,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Walk
+      name: walk
       takeName: Default Take
       firstFrame: 0
       lastFrame: 52
@@ -108,10 +114,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Jump
+      name: jump
       takeName: Default Take
-      firstFrame: 240
-      lastFrame: 270
+      firstFrame: 60
+      lastFrame: 90
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -138,8 +144,8 @@ ModelImporter:
     - serializedVersion: 16
       name: idle (1)
       takeName: Default Take
-      firstFrame: 60
-      lastFrame: 170
+      firstFrame: 100
+      lastFrame: 125
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -166,8 +172,8 @@ ModelImporter:
     - serializedVersion: 16
       name: idle (2)
       takeName: Default Take
-      firstFrame: 280
-      lastFrame: 400
+      firstFrame: 150
+      lastFrame: 210
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -192,10 +198,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: bored
+      name: hit
       takeName: Default Take
-      firstFrame: 570
-      lastFrame: 710
+      firstFrame: 220
+      lastFrame: 225
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -220,10 +226,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: loose
+      name: cheer
       takeName: Default Take
-      firstFrame: 510
-      lastFrame: 570
+      firstFrame: 401
+      lastFrame: 422
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -248,10 +254,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: cheer
+      name: loose
       takeName: Default Take
-      firstFrame: 460
-      lastFrame: 500
+      firstFrame: 270
+      lastFrame: 350
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

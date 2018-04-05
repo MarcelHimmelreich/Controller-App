@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 03cb6b114debad14c9f6ae65cd16d484
-timeCreated: 1521636839
+guid: 0c7b0c922e0d3b8469991afa9a46a7c8
+timeCreated: 1521636853
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -8,50 +8,58 @@ ModelImporter:
     100000: Armature
     100002: Character
     100004: chest
-    100006: downleg_R
-    100008: //RootNode
-    100010: foot_L
-    100012: foot_R
-    100014: head
-    100016: legdown_L
-    100018: root
-    100020: thigh_L
-    100022: thigh_R
-    100024: toe_L
-    100026: toe_R
+    100006: downleg_L
+    100008: downleg_R
+    100010: //RootNode
+    100012: eyes
+    100014: eyes_base
+    100016: eyes_target
+    100018: foot_L
+    100020: foot_R
+    100022: head
+    100024: leg_L
+    100026: leg_R
+    100028: root
+    100030: tail1
+    100032: tail2
+    100034: toe2_L
+    100036: toe_R
     400000: Armature
     400002: Character
     400004: chest
-    400006: downleg_R
-    400008: //RootNode
-    400010: foot_L
-    400012: foot_R
-    400014: head
-    400016: legdown_L
-    400018: root
-    400020: thigh_L
-    400022: thigh_R
-    400024: toe_L
-    400026: toe_R
-    2100000: Material_003
-    2100002: Auge
-    2100004: Material
-    2100006: F_sse
-    2100008: Schnabel
-    2100010: Material_001
-    2100012: Material_002
+    400006: downleg_L
+    400008: downleg_R
+    400010: //RootNode
+    400012: eyes
+    400014: eyes_base
+    400016: eyes_target
+    400018: foot_L
+    400020: foot_R
+    400022: head
+    400024: leg_L
+    400026: leg_R
+    400028: root
+    400030: tail1
+    400032: tail2
+    400034: toe2_L
+    400036: toe_R
+    2100000: dragon
+    2100002: Material_019
+    2100004: Material_017
+    2100006: Material_001
     4300000: Character
-    7400000: Default Take
+    4300002: eyes
+    7400000: hit
     7400002: ArmatureAction
-    7400004: Walk
-    7400006: Jump
+    7400004: walk
+    7400006: jump
     7400008: idle (1)
     7400010: idle (2)
-    7400012: bored
+    7400012: cheer
     7400014: loose
-    7400016: cheer
     9500000: //RootNode
     13700000: Character
+    13700002: eyes
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -80,10 +88,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Walk
+      name: walk
       takeName: Default Take
       firstFrame: 0
-      lastFrame: 52
+      lastFrame: 15
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -108,10 +116,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Jump
+      name: jump
       takeName: Default Take
-      firstFrame: 240
-      lastFrame: 270
+      firstFrame: 40
+      lastFrame: 70
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -138,8 +146,8 @@ ModelImporter:
     - serializedVersion: 16
       name: idle (1)
       takeName: Default Take
-      firstFrame: 60
-      lastFrame: 170
+      firstFrame: 90
+      lastFrame: 120
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -166,64 +174,8 @@ ModelImporter:
     - serializedVersion: 16
       name: idle (2)
       takeName: Default Take
-      firstFrame: 280
-      lastFrame: 400
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: bored
-      takeName: Default Take
-      firstFrame: 570
-      lastFrame: 710
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: loose
-      takeName: Default Take
-      firstFrame: 510
-      lastFrame: 570
+      firstFrame: 140
+      lastFrame: 190
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -250,8 +202,8 @@ ModelImporter:
     - serializedVersion: 16
       name: cheer
       takeName: Default Take
-      firstFrame: 460
-      lastFrame: 500
+      firstFrame: 315
+      lastFrame: 380
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -259,6 +211,62 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: loose
+      takeName: Default Take
+      firstFrame: 396
+      lastFrame: 444
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: hit
+      takeName: Default Take
+      firstFrame: 200
+      lastFrame: 205
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

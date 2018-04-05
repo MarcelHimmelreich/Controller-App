@@ -233,6 +233,18 @@ public class UIManager : MonoBehaviour {
     }
 
     //Ready
+    public void ChangeCharacter()
+    {
+        SwitchScreen(2);
+        CameraManager.ChangePosition(1);
+        ClientManager.ready = false;
+        GameScreen.active = false;
+        WaitingScreen.active = true;
+        ClientManager.SendClient();
+
+    }
+
+    //Ready
     public void LeaveGame()
     {
         ClientManager.LeaveGame();
@@ -241,6 +253,7 @@ public class UIManager : MonoBehaviour {
         CameraManager.ChangePosition(0);
     }
 
+    //Ready
     public void ReadyButton(bool ready)
     {
         ClientManager.ready = ready;
